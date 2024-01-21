@@ -20,7 +20,7 @@ fake.add_provider(LocationProvider)
 # Function to generate and ingest random data into MongoDB
 def generate_and_ingest_data(duration_days=1, granularity=3600, granularity_unit='hour'):
     # Connect to MongoDB
-    client = pymongo.MongoClient("mongodb+srv://XXXX")
+    client = pymongo.MongoClient("mongodb+srv://user:pass@cluster0.z63ug.mongodb.net/?retryWrites=true&w=majority")
     db = client["tsDb"]
     collection = db["weather_info_min"]
 
